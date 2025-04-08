@@ -15,7 +15,9 @@ public class SwaggerConfig {
 	}
 
 	private Info getOpenApiInfo() {
-		return new Info().title("Professor Allocation").description("Professor Allocation Rest Server")
-				.version("0.0.1-SNAPSHOT");
+		return new Info()
+			.title("Professor Allocation")
+			.description("Professor Allocation Rest Server")
+			.version("0.0.1-SNAPSHOT");
 	}
 }

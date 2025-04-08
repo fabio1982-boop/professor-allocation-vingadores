@@ -1,5 +1,8 @@
 package com.project.professor.allocation.controller;
 
-public class ProfessorContoller {
+
+
+
+public class CourseContoller {
 
 }
