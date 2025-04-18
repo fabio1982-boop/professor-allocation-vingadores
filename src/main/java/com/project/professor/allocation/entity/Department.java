@@ -25,6 +25,9 @@ public class Department {
 	@Column(name = "name", unique = true, nullable = false)
 	private String name;
 
+	/*
+	 Qual a utilidade dos métodos abaixo?
+
 	public void setDepartment(Department department) {
 		// TODO Auto-generated method stub
 		
@@ -34,4 +37,5 @@ public class Department {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	*/
 }

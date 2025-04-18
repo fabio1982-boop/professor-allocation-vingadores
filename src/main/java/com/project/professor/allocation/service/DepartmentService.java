@@ -9,11 +9,19 @@ import com.project.professor.allocation.repository.DepartmentRepository;
 @Service
 public class DepartmentService {
 	private final DepartmentRepository repository;
+	/*
+	Isso aqui gera uma referência cíclica (courseService -> courseService) o que impede
+	o backend de subir, ou seja, não foi testado antes de entregar
+	
 	private final DepartmentService departmentService;
 
 	public DepartmentService(DepartmentRepository repository, DepartmentService departmentService) {
 		this.repository = repository;
 		this.departmentService = departmentService;
+	}
+	*/
+	public DepartmentService(DepartmentRepository repository) {
+		this.repository = repository;
 	}
 
 	public Department findById(Long id) {
@@ -51,9 +59,14 @@ public class DepartmentService {
 	private Department saveInternal(Department department) {
 		department = repository.save(department);
 
+		/*
+		A classe de departamento não contém relacionamento dentro dela,
+		ou seja, não precisa preencher nada
+		
 		department = departmentService.findById(department.getDepartment().getId());
 
 		department.setDepartment(department);
+		*/
 
 		return department;
 	}
@@ -61,5 +74,4 @@ public class DepartmentService {
 	public List<Department> findAll(String name) {
 		return repository.findAll();
 	}
-
 }

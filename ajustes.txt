@@ -1,0 +1,3 @@
+O código nem rodava.
+Tive que sair corrigindo.
+Deixei comentários nos arquivos

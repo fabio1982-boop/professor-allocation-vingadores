@@ -7,5 +7,5 @@ import com.project.professor.allocation.entity.Allocation;
 
 @Repository
 public interface AllocationRepository extends JpaRepository<Allocation, Long> {
-
+	// Onde está o findByProfessor e findByCourse?
 }

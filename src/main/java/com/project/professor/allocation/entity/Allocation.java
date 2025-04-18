@@ -64,6 +64,9 @@ public class Allocation {
 		this.setCourse(course);
 	}
 
+	/*
+	Qual a utilidade dos métodos abaixo?
+
 	public Allocation getAllocation() {
 		return null;
 	}
@@ -71,4 +74,5 @@ public class Allocation {
 	public void setAllocation(Allocation allocation) {
 		
 	}
+	*/
 }

@@ -11,4 +11,5 @@ import com.project.professor.allocation.entity.Professor;
 @Repository
 public interface ProfessorRepository extends JpaRepository<Professor, Long> {
 	List <Professor> findByDepartment(Department dep);
+	// Onde está o findByNameContainingIgnoreCase?
 }

@@ -25,6 +25,9 @@ public class Course {
 	@Column(name = "name", nullable = false, unique = true)
 	private String name;
 
+	/*
+	Qual a utilidade dos métodos abaixo?
+
 	public Course getCourse() {
 		return null;
 	}
@@ -33,4 +36,5 @@ public class Course {
 		
 		
 	}
+	*/
 }

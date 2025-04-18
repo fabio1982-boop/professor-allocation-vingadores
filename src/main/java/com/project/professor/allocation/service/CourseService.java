@@ -11,11 +11,20 @@ import com.project.professor.allocation.repository.CourseRepository;
 
 public class CourseService {
 	private final CourseRepository repository;
+	/*
+	Isso aqui gera uma referência cíclica (courseService -> courseService) o que impede
+	o backend de subir, ou seja, não foi testado antes de entregar
+	
 	private final CourseService courseService;
 
 	public CourseService(CourseRepository repository, CourseService courseService) {
 		this.repository = repository;
 		this.courseService = courseService;
+	}
+	*/
+	
+	public CourseService(CourseRepository repository) {
+		this.repository = repository;
 	}
 
 	public Course findById(Long id) {
@@ -51,9 +60,14 @@ public class CourseService {
 	private Course saveInternal(Course course) {
 		course = repository.save(course);
 
+		/*
+		A classe de curso não contém relacionamento dentro dela,
+		ou seja, não precisa preencher nada
+		
 		course = courseService.findById(course.getCourse().getId());
 
 		course.setCourse(course);
+		*/
 
 		return course;
 	}
